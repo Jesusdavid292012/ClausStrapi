@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiendas",
+  "info": {
+    "name": "Tienda",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "foto": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "categorias": {
+      "model": "categorias"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "nueva_coleccion": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "unique": false
+    },
+    "promocion": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}
