@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "otros",
+  "info": {
+    "name": "otros"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hola": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}
